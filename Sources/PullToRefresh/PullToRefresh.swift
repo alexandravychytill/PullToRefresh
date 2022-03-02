@@ -13,7 +13,7 @@ public enum PullToRefreshState{
 }
 
 
-@available(macOS 13.0, *)
+@available(macOS 14.0, *)
 public struct PullToRefresh: View {
     // MARK: Attributes
     @State var needRefresh: PullToRefreshState = .wating
