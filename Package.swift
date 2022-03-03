@@ -13,6 +13,9 @@ let package = Package(
         .library(
             name: "PullToRefresh",
             targets: ["PullToRefresh"]),
+        .library(
+               name: "New",
+               targets: ["New"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -24,6 +27,9 @@ let package = Package(
         .target(
             name: "PullToRefresh",
             dependencies: []),
+        .target(
+                name: "New",
+                dependencies: []),
         .testTarget(
             name: "PullToRefreshTests",
             dependencies: ["PullToRefresh"]),

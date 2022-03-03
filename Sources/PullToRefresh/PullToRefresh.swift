@@ -12,7 +12,6 @@ public enum PullToRefreshState{
     case finishing
 }
 
-
 @available(macOS 14.0, *)
 public struct PullToRefresh: View {
     // MARK: Attributes
@@ -26,13 +25,13 @@ public struct PullToRefresh: View {
     private let on = 1.0
     private let off = 0.0
     
-    
     public init(coordinateSpaceName: String, onRefresh: @escaping () -> Void, canReload: Bool){
         self.coordinateSpaceName = coordinateSpaceName
         self.onRefresh = onRefresh
         self.canReload = canReload
     }
     
+    // MARK: - Body
    public var body: some View {
         GeometryReader{ geo in
             if(geo.frame(in: .named(coordinateSpaceName)).midY > self.midY){
